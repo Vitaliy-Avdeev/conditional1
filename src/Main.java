@@ -2,44 +2,46 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         var taskOne = ("Задача №1");
-        System.out.println(taskOne);
-        int age1 = 8;
-        System.out.printf(age1 >= 18 ?
-                "Если возраст человека равен " + age1 + ", то он совершеннолетний." :
-                "Если возраст человека равен " + age1 + ", то он не достиг совершеннолетия, нужно немного подождать.");
-        System.out.println();
+        int age = 17;
+        if (age >= 18) {
+            System.out.println("Если возраст человека равен " + age + ",то он совершеннолетний.");
+        } else {
+            System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать.");
+        }
 
         var taskTwo = ("Задача №2");
         System.out.println(taskTwo);
-        int temperature = 9;
-        System.out.printf(temperature >= 5 ?
-                "На улице " + temperature + " можно идти без шапки." :
-                "На улице " + temperature + " нужно надеть шапку.");
-        System.out.println();
+        int temperature = 5;
+        if (temperature >= 5) {
+            System.out.println("На улице " + temperature + " можно идти без шапки.");
+        } else {
+            System.out.println("На улице " + temperature + " нужно надеть шапку.");
+        }
 
         var taskThree = ("Задача №3");
         System.out.println(taskThree);
-        int speed = 150;
-        System.out.print(speed <= 60 ?
-                "Если скорость " + speed + ", то можно ездить спокойно." :
-                "Если скорость " + speed + ", то придется заплатить штраф.");
-        System.out.println();
+        double speed = 60;
+        if (speed <= 60) {
+            System.out.println("Если скорость " + speed + ", то можно ездить спокойно.");
+        } else {
+            System.out.println("Если скорость " + speed + ", то придется заплатить штраф.");
+        }
+
 
         var taskFour = ("Задача №4");
         System.out.println(taskFour);
-        int agePeople = 3;
-        boolean canNotGoToSchool = agePeople > 24;
+        int agePeople = 25;
+        boolean canGoToSchool = agePeople >= 7 && agePeople <= 17;
+        boolean canNotGoToSchool = agePeople >= 18 && agePeople <= 24;
+        boolean canGoToWork = agePeople > 24;
         if (agePeople > 2 && agePeople <= 6) {
-            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить в детский сад");
-        }
-        if (agePeople > 7 && agePeople <= 17) {
-            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить в школу");
-        }
-        if (agePeople >= 18 && agePeople <= 24) {
-            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить в университет");
-        }
-        if (canNotGoToSchool) {
-            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить на работу");
+            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить в детский сад.");
+        } else if (canGoToSchool) {
+            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить в школу.");
+        } else if (canNotGoToSchool) {
+            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить в университет.");
+        } else if (canGoToWork) {
+            System.out.println("Если возраст человека равен " + agePeople + ", то ему нужно ходить на работу.");
         }
 
         var taskFive = ("Задача №5");
@@ -75,7 +77,7 @@ public class Main {
         }
 
         var taskSeven = ("Задача №7");
-        System.out.println(taskSeven );
+        System.out.println(taskSeven);
 
         int one = 28;
         int two = 1;
@@ -89,11 +91,6 @@ public class Main {
             max = three;
         }
         System.out.println(max + " большее число.");
-
-
-
-
-
 
 
     }
